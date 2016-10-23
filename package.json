@@ -1,0 +1,26 @@
+{
+  "name": "bookterest",
+  "version": "1.0.0",
+  "description": "Pinterest Style App with React/Redux/ES6/Node/Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kirie/Bookterest.git"
+  },
+  "author": "Eirik",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kirie/Bookterest/issues"
+  },
+  "homepage": "https://github.com/kirie/Bookterest#readme",
+  "devDependencies": {
+    "eslint": "^3.8.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1"
+  }
+}
