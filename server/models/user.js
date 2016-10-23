@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt-nodejs');
 
 const Schema = mongoose.Schema;
 const userSchema = new Schema({
-  email: String,
+  username: String,
   password: String,
   board: []
 });
@@ -21,7 +21,6 @@ userSchema.pre('save', function (next) {
       if (hashErr) {
         return next(hashErr);
       }
-
       user.password = hash;
       next();
     });
@@ -37,6 +36,6 @@ userSchema.methods.comparePassword = function (candidatePassword, callback) {
   });
 };
 
-const ModelClass = mongoose.model('terest', userSchema);
+const ModelClass = mongoose.model('bookterest', userSchema);
 
 module.exports = ModelClass;
