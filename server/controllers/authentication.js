@@ -9,7 +9,7 @@ function tokenForUser(user) {
 
 exports.signin = function (req, res, next) {
   // user auth'd. give them a token
-  res.send({ token: tokenForUser(req.user), uniqid: req.body.email });
+  res.send({ token: tokenForUser(req.user)});
 };
 
 exports.signup = function (req, res, next) {
@@ -34,7 +34,7 @@ exports.signup = function (req, res, next) {
       if (err) {
         return next(saveErr);
       }
-      res.json({ token: tokenForUser(user), uniqid: req.body.email });
+      res.json({ token: tokenForUser(user)});
     });
   });
 };
