@@ -1,10 +1,11 @@
 {
   "name": "bookterest",
   "version": "1.0.0",
-  "description": "Pinterest Style App with React/Redux/ES6/Node/Express",
+  "description": "Pinterest Style App with React/Redux/ES6/Node/Express/Passport",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "mocha --compilers js:babel-core/register --require ./tests/test_helper.js 'tests/**/*.js'",
+    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
   },
   "repository": {
     "type": "git",
@@ -32,11 +33,16 @@
     "babel-preset-stage-1": "^6.16.0",
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
+    "chai": "^3.5.0",
+    "chai-jquery": "^2.0.0",
     "cors": "^2.8.1",
     "express": "^4.14.0",
     "http": "0.0.0",
+    "jquery": "^3.1.1",
+    "jsdom": "^9.8.3",
     "jwt-simple": "^0.5.0",
     "lodash": "^4.16.4",
+    "mocha": "^3.1.2",
     "mongoose": "^4.6.4",
     "morgan": "^1.7.0",
     "nodemon": "^1.11.0",
@@ -44,6 +50,7 @@
     "passport-jwt": "^2.1.0",
     "passport-local": "^1.0.0",
     "react": "^15.3.2",
+    "react-addons-test-utils": "^15.3.2",
     "react-addons-update": "^15.3.2",
     "react-dom": "^15.3.2",
     "react-notification-system": "^0.2.10",
