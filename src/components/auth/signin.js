@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { reduxForm } from 'redux-form';
 import * as actions from '../../actions/index';
 
@@ -39,6 +39,10 @@ class Signin extends Component {
 function mapStateToProps(state) {
   return { errorMessage: state.auth.error };
 }
+
+Signin.propTypes = {
+  errorMessage: PropTypes.string.isRequired
+};
 
 export default reduxForm({
   form: 'signin',
