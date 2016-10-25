@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { reducer as form } from 'redux-form';
-import bookReducer from './reducer_books';
+import bookReducer from './books_reducer';
 import authReducer from './auth_reducer';
 import boardReducer from './board_reducer';
 import notification from './notification_reducer';

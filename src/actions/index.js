@@ -47,7 +47,7 @@ export function signupUser({ username, password }) {
         browserHistory.push('/recommendations');
       })
       .catch((response) => {
-        dispatch(addNotification(response.data.message, response.data.level))
+        dispatch(addNotification(response.data.message, response.data.level));
       });
   };
 }

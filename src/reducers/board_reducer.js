@@ -13,6 +13,7 @@ export default function (state = INITIAL_STATE, action) {
       return update(state, { board: { $push: [action.payload] } });
     case DELETE_PIN:
       return { board: state.board.filter(val => val.id !== action.payload) };
+    default:
+      return state;
   }
-  return state;
 }
