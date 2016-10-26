@@ -7,6 +7,21 @@ const ROOT_URL = 'http://localhost:3090';
 const GOOGLE_URL = 'https://www.googleapis.com/books/v1/volumes?q=+intitle:';
 const GOOGLE_OPTIONS = '&country=US&maxResults=20';
 
+export function authError(error) {
+  return {
+    type: AUTH_ERROR,
+    payload: error
+  };
+}
+
+export function addNotification(message, level) {
+  return {
+    type: ADD_NOTIFICATION,
+    message: message,
+    level: level
+  };
+}
+
 export function getBooks(term) {
   const searchTerm = `${GOOGLE_URL}${term}${GOOGLE_OPTIONS}&key=${config.API_KEY}`;
   return function (dispatch) {
@@ -39,7 +54,7 @@ export function signinUser({ username, password }) {
 }
 
 export function signupUser({ username, password }) {
-  return function(dispatch) {
+  return function (dispatch) {
     axios.post(`${ROOT_URL}/signup`, { username, password })
       .then((response) => {
         dispatch({ type: AUTH_USER });
@@ -57,13 +72,6 @@ export function signoutUser() {
   return { type: UNAUTH_USER };
 }
 
-export function authError(error) {
-  return {
-    type: AUTH_ERROR,
-    payload: error
-  };
-}
-
 export function fetchBoard() {
   return function (dispatch) {
     axios.get(`${ROOT_URL}/fetchboard`, { headers: { authorization: localStorage.getItem('token') } })
@@ -76,14 +84,6 @@ export function fetchBoard() {
       .catch(() => {
         dispatch(addNotification('Sorry, something went wrong fetching your board. A team of highly trained monkeys has been dispatched to deal with this situation.', 'error'));
       });
-  };
-}
-
-export function addNotification(message, level) {
-  return {
-    type: ADD_NOTIFICATION,
-    message: message,
-    level: level
   };
 }
 

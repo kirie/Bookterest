@@ -10,7 +10,7 @@ describe('App', () => {
   });
 
   it('has the correct class', () => {
-    expect(component).to.have.class('border-warpper');
+    expect(component).to.have.class('border-wrapper');
   });
 
 });

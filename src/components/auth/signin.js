@@ -40,10 +40,6 @@ function mapStateToProps(state) {
   return { errorMessage: state.auth.error };
 }
 
-Signin.propTypes = {
-  errorMessage: PropTypes.string.isRequired
-};
-
 export default reduxForm({
   form: 'signin',
   fields: ['username', 'password']
