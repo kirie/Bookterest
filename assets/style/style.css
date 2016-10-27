@@ -1,0 +1,265 @@
+/* Colours:
+  Brown: #3A2100
+  Dark Sea: #009CAB
+  YGreen: #5E8220
+  Red: #E90F1C
+  Neutral: #D6D5C9
+  Black: #20201B
+*/
+
+html {
+  background-color: #3A2100;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  width:100%;
+  height:100%;
+  font-size:18px;
+}
+
+#border-wrapper {
+  background-color: #D6D5C9;
+  padding:2em;
+  height:100%;
+  box-shadow: inset -5px -3px 15px 8px #3A2100;
+  overflow:auto;
+}
+
+
+
+/** Header **/
+
+#theheader{
+ font-size:22px;
+}
+
+.brandimg {
+  margin-top:-7px;
+  height:43px;
+  width:170px;
+}
+
+.navbar-nav li .nav-link {
+  border-bottom: 1px solid transparent;  
+}
+
+.navbar-nav li .nav-link:hover {
+  border-bottom: 1px solid #5E8220;  
+}
+
+
+
+/** Auth **/
+
+.signin {
+  height:43rem;
+}
+
+.signup {
+  height:43rem;
+}
+
+.goodbye{
+  height:42rem;
+}
+
+
+
+/* Cards */
+
+.card {
+  border-radius:5px;
+  position:relative;
+  width:100%;
+  margin-top: 1rem;
+  padding-bottom:0.5rem;
+}
+
+.card:hover {
+  box-shadow: 4px 4px 4px #888888;
+}
+
+.viewbutton {
+  padding:5px;
+  font-size:14px;
+}
+
+.card:hover .viewbutton {
+  background-color:#009CAB;
+  color:white;
+  border:none;
+}
+
+.card:hover .pinbutton {
+  background-color:#009CAB;
+  color: white;
+  opacity:1;
+  border: none;
+  transition:0.2s;
+}
+
+.card-columns {
+  width: 72rem;
+  margin:2rem auto;
+  column-count:5;
+}
+
+.card-block {
+  padding:0.5rem;
+}
+
+.card-text{
+  font-family: 'Playfair Display', serif;
+}
+
+.card-img-top {
+  margin:auto;
+  padding:0 0 1rem 0;
+  height:95%;
+  width:100%;
+  display:block;
+  border-radius:5px;
+}
+
+.pinbutton {
+  opacity:0;
+  position:absolute;
+  top:5px;
+  right:5px;
+  padding: 0.2rem 0.5rem;
+  transition:0.2s;
+}
+
+.fa-thumb-tack {
+  color:white;
+}
+
+
+
+/** Pinboard */
+
+.pinboard{
+  margin-top:5rem;
+}
+
+
+
+/** SearchBar**/
+
+#booksearchbar {
+  margin-top:1rem;
+  margin-bottom:1rem;
+}
+
+.booksearchinput{
+  border-radius: 5px;
+}
+
+.booksearchinput:hover,
+.booksearchinput:active,
+.booksearchinput:focus {
+  border-color: #5E8220;
+}
+
+.input-group {
+  margin:auto;
+  margin-top:1rem;
+  max-width:72rem;
+  text-align:center;  
+}
+
+
+
+/** Recommendations **/
+
+.slick-slide img{
+  height:450px;
+  width:100%;
+  border-radius:5px;
+}
+  
+#recommendations h2 {
+  text-align:center;
+  padding:5rem;
+}
+
+.carousel{
+  padding-left:80px;
+}
+
+.googlebooks{
+  height:56px;
+  width:142px;
+  margin-top: -15px;
+}
+
+#featurebanner {
+  border-radius:5px;
+  padding:0px;
+  background-color: #5E8220;
+  margin-top:5rem;
+  margin-bottom:8rem;
+}
+
+.sticker{
+  background: rgba(0,0,0,0.4);
+  padding:12rem 9rem 10rem 1rem;
+  font-size:3rem;
+  border-radius:5px;
+  color:white;
+  text-align:center;
+}
+
+#quotes {
+  text-align:center;
+  margin-top:3rem;
+  background:url('./bookpages.jpeg') center repeat fixed;
+  background-size:cover;
+  padding:140px 0;
+  color: #20201B;
+}
+
+
+
+/** Responsive Cards **/
+
+@media only screen and (max-width: 1200px) {
+  .card-columns {
+    width: 60rem;
+    -webkit-column-count: 4;
+    column-count:4;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .card-columns {
+    width: 48rem;
+    -webkit-column-count: 4;
+    column-count:4;
+  }
+}
+
+@media only screen and (max-width: 840px) {
+  .card-columns {
+    width: 36rem;
+    -webkit-column-count: 3;
+    column-count:3;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .card-columns {
+    width: 24rem;
+    -webkit-column-count: 2;
+    column-count:2;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  .card-columns {
+    width: 12rem;
+    -webkit-column-count: 1;
+    column-count:1;
+  }
+}
