@@ -14,6 +14,9 @@ global.document = jsdom.jsdom('<!doctype html><html><body></body></html>');
 global.window = global.document.defaultView;
 const $ = jquery(global.window);
 
+global.navigator = {
+  userAgent: 'node.js'
+};
 // build 'renderComponent' helper that should render a given react class
 function renderComponent(ComponentClass, props, state) {
   const componentInstance = TestUtils.renderIntoDocument(
