@@ -43,7 +43,7 @@ class Header extends Component {
     return (
       <div id="theheader">
         <nav className="navbar navbar-light">
-          <Link to="/" className="navbar-brand"><img className="brandimg" alt="brand" src="../../../style/bookCut.png" />
+          <Link to="/" className="navbar-brand"><img className="brandimg" alt="brand" src="../../assets/images/bookCut.png" />
           </Link>
           <ul className="nav navbar-nav">
             {this.renderLinks()}

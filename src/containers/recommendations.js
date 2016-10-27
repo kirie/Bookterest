@@ -2,8 +2,8 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {addPin, addNotification} from '../actions/index';
 import {bindActionCreators} from 'redux';
-import Recos from '../../config/recommendations';
-import Quotes from '../../config/quotes';
+import Recos from '../../assets/recommendations';
+import Quotes from '../../assets/quotes';
 import Slider from 'react-slick';
 
 class Recommendations extends Component {
@@ -79,9 +79,9 @@ class Recommendations extends Component {
               </div>
               <div className="col-sm-8 carousel">
                 <Slider {...slideSettings}>
-                  <div><img src="../../style/pexels-photo-30982.jpg" /></div>
-                  <div><img src="../../style/light-dark-bed-lamp.jpg" /></div>
-                  <div><img src="../../style/person-woman-hand-relaxing.jpg" /></div>
+                  <div><img src="../../assets/images/pexels-photo-30982.jpg" /></div>
+                  <div><img src="../../assets/images/light-dark-bed-lamp.jpg" /></div>
+                  <div><img src="../../assets/images/person-woman-hand-relaxing.jpg" /></div>
                 </Slider>
               </div>
             </div>

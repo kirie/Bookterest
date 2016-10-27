@@ -24,6 +24,7 @@ export function addNotification(message, level) {
 
 export function getBooks(term) {
   const searchTerm = `${GOOGLE_URL}${term}${GOOGLE_OPTIONS}&key=${config.API_KEY}`;
+  console.log(searchTerm);
   return function (dispatch) {
     axios.get(searchTerm)
       .then((response) => {
