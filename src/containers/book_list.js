@@ -11,7 +11,7 @@ class BookList extends Component {
     }
   }
 
-  savePin(idx){
+  savePin(idx) {
     if (!this.props.authenticated) {
       this.props.addNotification('Sign in or create an account to save a book.', 'info');
     }
@@ -57,9 +57,9 @@ class BookList extends Component {
   }
 
   render() {
-    if (!this.props.books.booklist){
+    if (!this.props.books.booklist) {
       return (
-        <div className="emptymsg"></div>
+        <div className="emptymsg" />
       );
     }
     return (
