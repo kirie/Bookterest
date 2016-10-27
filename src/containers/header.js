@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux'
+import {bindActionCreators} from 'redux';
 import {Link} from 'react-router';
 import {fetchBoard} from '../actions/index';
 
 class Header extends Component {
 
   componentWillMount(){
-    if(this.props.authenticated){
+    if(this.props.authenticated) {
       this.props.fetchBoard();
     }
   }

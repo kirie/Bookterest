@@ -5,7 +5,7 @@ import { addPin, getBooks, addNotification } from '../actions/index';
 
 class BookList extends Component {
 
-  componentWillMount(){
+  componentWillMount() {
     if (this.props.books.booklist.length < 1) {
       this.props.getBooks('espresso');
     }
@@ -38,7 +38,9 @@ class BookList extends Component {
     
     return (
       <div className="card" key={id}>
-       <button className="btn btn-secondary pinbutton" value={indx} onClick={event => this.savePin(event.target.value)}><i className="fa fa-thumb-tack"></i> Save</button>
+        <button className="btn btn-secondary pinbutton" value={indx} onClick={event => this.savePin(event.target.value)}>
+          <i className="fa fa-thumb-tack" /> Save
+        </button>
         <img className="card-img-top" src={thumbnail} />
           <div className="card-block">
             <h5 className="card-title">{title}</h5>
@@ -62,7 +64,7 @@ class BookList extends Component {
     }
     return (
       <div className="card-columns">
-          {this.props.books.booklist.map(this.renderBook, this)}
+        {this.props.books.booklist.map(this.renderBook, this)}
       </div>
     );
   }

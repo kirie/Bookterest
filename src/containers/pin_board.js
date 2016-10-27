@@ -1,10 +1,9 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import {deletePin, fetchBoard} from '../actions/index';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { deletePin, fetchBoard } from '../actions/index';
 
 class PinBoard extends Component {
-  
   componentWillMount() {
     this.props.fetchBoard();
   }
