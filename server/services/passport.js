@@ -30,7 +30,7 @@ const localLogin = new LocalStrategy(localOptions, function (username, password,
 
 const jwtOptions = {
   jwtFromRequest: ExtractJwt.fromHeader('authorization'),
-  secretOrKey: config.secret
+  secretOrKey: config.SECRET
 };
 
 const jwtLogin = new JwtStrategy(jwtOptions, function (payload, done) {

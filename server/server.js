@@ -8,7 +8,7 @@ const router = require('./router');
 const config = require('../config/config');
 
 // db setup
-mongoose.connect(config.database);
+mongoose.connect(config.DATABASE);
 
 // config
 const port = process.env.PORT || 3090;
