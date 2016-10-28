@@ -1,21 +1,18 @@
 # Bookterest
 
-A Pinterest style app using React/Redux/ES6/Node/Express/MongoDB/Passport
+A Pinterest style app using React/Redux/ES6/Node/Express/MongoDB/Passport.  Accesses Google's Book API to fetch books and displays them in a pinterest style format. 
 
 ## Motivation
 
-A short description of the motivation behind the creation and maintenance of the project. This should explain **why** the project exists.
+A modern demonstration of creating a full stack web application with React, ES6 and Redux on the clientside.  Also, sessionless authentication using JSON Web Tokens(jwt) and passport authenticated users running on an Express.js server. 
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-  
 ### Prerequisites
 
 What things you need to install the software and how to install them
 
 ```
 node.js
+Google Books api key
 ```
 
 ### Installing
@@ -45,7 +42,7 @@ npm test
 * [react-router](https://github.com/ReactTraining/react-router) - Client Routing
 * [redux-thunk](https://github.com/gaearon/redux-thunk) - Async Middleware
 * [axios](https://github.com/mzabriskie/axios) - HTTP AJAX Client
-* [mongoose](http://mongoosejs.com//) - MongoDB Tooling
+* [mongoose](http://mongoosejs.com/) - MongoDB Tooling
 * [lodash](https://lodash.com) - Utility Library
 * [redux-form](https://github.com/erikras/redux-form) - Form state with Redux
 * [react-slick](https://github.com/akiran/react-slick) - Picture Carousel 
