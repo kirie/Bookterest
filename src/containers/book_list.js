@@ -29,13 +29,13 @@ class BookList extends Component {
     const title = eachBook.volumeInfo.title;
     const authors = eachBook.volumeInfo.authors ?
       eachBook.volumeInfo.authors.reduce((author1, author2) => {
-        return author1 + ', ' + author2;
+        return `${author1}, ${author2}`;
       }) : 'Unknown Author';
-    const description = eachBook.searchInfo ? eachBook.searchInfo.textSnippet : "No Description found";
+    const description = eachBook.searchInfo ? eachBook.searchInfo.textSnippet : 'No Description found';
     const thumbnail = eachBook.volumeInfo.imageLinks ? eachBook.volumeInfo.imageLinks.thumbnail : NO_IMG;
     const webreaderlink = eachBook.accessInfo.webReaderLink ? eachBook.accessInfo.webReaderLink : '//:0';
     const indx = idx;
-    
+
     return (
       <div className="card" key={id}>
         <button className="btn btn-secondary pinbutton" value={indx} onClick={event => this.savePin(event.target.value)}>
@@ -50,7 +50,7 @@ class BookList extends Component {
                 {description}
               </small>
             </p>
-            <a href={webreaderlink} target="_blank"><button className="btn btn-secondary viewbutton">View</button></a>
+            <a href={webreaderlink} target="_blank" rel="noopener noreferrer"><button className="btn btn-secondary viewbutton">View</button></a>
           </div>
       </div>
     );

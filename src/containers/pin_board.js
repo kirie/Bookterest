@@ -18,7 +18,7 @@ class PinBoard extends Component {
     const title = eachBook.volumeInfo.title;
     const authors = eachBook.volumeInfo.authors ? 
       eachBook.volumeInfo.authors.reduce((author1, author2) => {
-        return author1 + ', ' + author2;
+        return `${author1}, ${author2}`;
       }) : 'Unknown Author';
     const description = eachBook.searchInfo ? eachBook.searchInfo.textSnippet : "No Description found";
     const thumbnail = eachBook.volumeInfo.imageLinks ? eachBook.volumeInfo.imageLinks.thumbnail : NO_IMG;
@@ -36,7 +36,7 @@ class PinBoard extends Component {
                 {description}
               </small>
             </p>
-            <a href={webreaderlink} target="_blank"><button className="btn btn-secondary viewbutton">View</button></a>
+            <a href={webreaderlink} target="_blank" rel="noopener noreferrer"><button className="btn btn-secondary viewbutton">View</button></a>
           </div>
       </div>
     )
