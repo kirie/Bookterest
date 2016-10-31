@@ -17,6 +17,7 @@ const $ = jquery(global.window);
 global.navigator = {
   userAgent: 'node.js'
 };
+
 // build 'renderComponent' helper that should render a given react class
 function renderComponent(ComponentClass, props, state) {
   const componentInstance = TestUtils.renderIntoDocument(

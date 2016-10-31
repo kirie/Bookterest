@@ -12,4 +12,5 @@ describe('App', () => {
   it('has the correct class', () => {
     expect(component).to.have.id('border-wrapper');
   });
+
 });

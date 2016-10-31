@@ -1,0 +1,7 @@
+exports[`Not Found Component (Snapshot) Not Found Renders 1`] = `
+<div>
+  <h1>
+    Oops!  That page doesn\'t exist.
+  </h1>
+</div>
+`;
