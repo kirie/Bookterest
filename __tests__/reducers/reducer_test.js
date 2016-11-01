@@ -1,10 +1,17 @@
 import reducer from '../../src/reducers/books_reducer';
-import * as types from '../../src/actions/types';
+import { GET_BOOKS } from '../../src/actions/types';
 
-describe('todos reducer', () => {
-  it('should return the initial state', () => {
+describe('Books reducer', () => {
+  it('should return an empty initial state', () => {
     expect(
       reducer(undefined, {})
-    ).toEqual({booklist: []});
+    ).toEqual({ booklist: [] });
+  });
+
+  it('should handle 2 incoming books', () => {
+    const action = { type: GET_BOOKS, payload: { items: [{}, {}] } };
+    expect(
+      reducer(undefined, action).booklist.length)
+      .toEqual(2);
   });
 });

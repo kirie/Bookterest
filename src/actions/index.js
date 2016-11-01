@@ -23,7 +23,7 @@ export function addNotification(message, level) {
 }
 
 export function getBooks(term) {
-  const searchTerm = `${GOOGLE_URL}${term}${GOOGLE_OPTIONS}&key=${config.API_KEY || env.API_KEY}`;
+  const searchTerm = `${GOOGLE_URL}${term}${GOOGLE_OPTIONS}&key=${config.API_KEY || API_KEY}`;
   return function (dispatch) {
     axios.get(searchTerm)
       .then((response) => {
