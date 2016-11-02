@@ -77,7 +77,9 @@ npm test
 * [React-slick](https://github.com/akiran/react-slick) - Picture Carousel 
 * [React-notification-system](https://github.com/igorprado/react-notification-system) - Notifications
 * [Mocha](https://github.com/mochajs/mocha) - Test framework
+* [Jest](https://facebook.github.io/jest/) - Test framework
 * [Chai](https://github.com/chaijs/chai) - Test assertions
+* [Enzyme](https://github.com/airbnb/enzyme) - Test Utilities
 * [Bootstrap](http://getbootstrap.com/css/) - Bootstrap CSS v4 Library
 
 

@@ -4,9 +4,9 @@
   "description": "Pinterest Style App with React/Redux/ES6/Node/Express/Passport",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --compilers js:babel-core/register --require ./tests/test_helper.js 'tests/**/*.js'",
+    "testMocha": "mocha --compilers js:babel-core/register --require ./tests/test_helper.js 'tests/**/*.js'",
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
-    "testjest": "jest"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
