@@ -8,7 +8,7 @@ describe('Books reducer', () => {
     ).toEqual({ booklist: [] });
   });
 
-  it('should handle 2 incoming books', () => {
+  it('should handle a payload that returns 2 book objects', () => {
     const action = { type: GET_BOOKS, payload: { items: [{}, {}] } };
     expect(
       reducer(undefined, action).booklist.length)

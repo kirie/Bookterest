@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
-import {Link} from 'react-router';
-import {fetchBoard} from '../actions/index';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { Link } from 'react-router';
+import { fetchBoard } from '../actions/index';
 
 class Header extends Component {
 
-  componentWillMount(){
-    if(this.props.authenticated) {
+  componentWillMount() {
+    if (this.props.authenticated) {
       this.props.fetchBoard();
     }
   }
 
-  renderLinks(){
+  renderLinks() {
     if (this.props.authenticated) {
       return ([
         <li className="nav-item" key={3}>

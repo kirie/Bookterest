@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import { Router, Route, IndexRoute, browserHistory } from 'react-router';
 import reduxThunk from 'redux-thunk';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import { AUTH_USER } from './actions/types';
 import App from './components/app';
@@ -18,7 +19,7 @@ import PinBoard from './containers/pin_board';
 import NotFound from './components/not_found';
 
 // Redux-thunk middleware to return a function between action and reducer
-const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
+const createStoreWithMiddleware = composeWithDevTools(applyMiddleware(reduxThunk))(createStore);
 const store = createStoreWithMiddleware(reducers);
 
 const token = localStorage.getItem('token');

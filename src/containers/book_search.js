@@ -10,12 +10,14 @@ class BookSearch extends Component {
     super(props);
     this.state = { term: '' };
     this.onInputChange = this.onInputChange.bind(this);
+    this.bookfind = _.debounce(this.props.getBooks, 300);
   }
 
   onInputChange(event) {
-    const searchDebounce = _.debounce((item) => { this.props.getBooks(item) }, 200, false);
+    //const searchDebounce = _.debounce((item) => { this.props.getBooks(item) }, 200);
     this.setState({ term: event.target.value });
-    searchDebounce(event.target.value);
+    this.bookfind(event.target.value);
+    // searchDebounce(event.target.value);
   }
 
   render() {
