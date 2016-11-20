@@ -5,12 +5,14 @@ import Slider from 'react-slick';
 import { addPin, addNotification } from '../actions/index';
 import Recos from '../../assets/recommendations';
 import Quotes from '../../assets/quotes';
+import CardDisplay from '../components/card_display';
 
 class Recommendations extends Component {
 
   constructor(props) {
     super(props);
     this.changeHandler = this.changeHandler.bind(this);
+    this.savePin = this.savePin.bind(this);
   }
 
   savePin(idx) {
@@ -26,38 +28,6 @@ class Recommendations extends Component {
     this.refs.slider.slickGoTo(e.target.value);
   }
 
-  renderRecommendations(eachReco, idx) {
-    const NO_IMG = 'https://books.google.com/googlebooks/images/no_cover_thumb.gif';
-    const id = eachReco.id;
-    const title = eachReco.volumeInfo.title;
-    const authors = eachReco.volumeInfo.authors ?
-      eachReco.volumeInfo.authors.reduce((author1, author2) => {
-        return `${author1}, ${author2}`;
-      }) : 'Unknown Author';
-    const description = eachReco.searchInfo ? eachReco.searchInfo.textSnippet : "No Description found";
-    const thumbnail = eachReco.volumeInfo.imageLinks ? eachReco.volumeInfo.imageLinks.thumbnail : NO_IMG;
-    const webreaderlink = eachReco.accessInfo.webReaderLink ? eachReco.accessInfo.webReaderLink : '//:0';
-    const indx = idx;
-
-    return (
-      <div className="card" key={id}>
-        <button className="btn btn-secondary pinbutton" value={indx} onClick={event => this.savePin(event.target.value)}>
-          <i className="fa fa-thumb-tack" /> Save
-        </button>
-        <img className="card-img-top" src={thumbnail} />
-          <div className="card-block">
-            <h5 className="card-title">{title}</h5>
-            <h6>{authors}</h6>
-            <p className="card-text">
-              <small>
-                {description}
-              </small>
-            </p>
-            <a href={webreaderlink} target="_blank" rel="noopener noreferrer"><button className="btn btn-secondary viewbutton">View</button></a>
-          </div>
-      </div>
-    );
-  }
 
   render() {
     const slideSettings = {
@@ -101,9 +71,12 @@ class Recommendations extends Component {
 
         <div id="recommendations">
           <h2>Need a recommendation?</h2>
-          <div className="card-columns">
-            { Recos.recommendations.map(this.renderRecommendations, this) }
-          </div>
+          <CardDisplay
+            booksToCards={Recos.recommendations}
+            funcToCards={this.savePin}
+            iconButton="fa fa-thumb-tack"
+            textButton="Save"
+          />
         </div>
       </div>
     );

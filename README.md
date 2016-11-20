@@ -27,8 +27,8 @@ To demonstrate the creation of a full stack web application with React(v15.3.2),
 ### Prerequisites
 
 ```
-node.js
-google books api key
+Node.js
+Google books api key
 ```
 
 Default config object location is set to config/config.js.
@@ -76,13 +76,13 @@ npm test
 * [Redux-form](https://github.com/erikras/redux-form) - Form Validation State With Redux
 * [React-slick](https://github.com/akiran/react-slick) - Picture Carousel 
 * [React-notification-system](https://github.com/igorprado/react-notification-system) - Notifications
-* [Mocha](https://github.com/mochajs/mocha) - Test framework
 * [Jest](https://facebook.github.io/jest/) - Test framework
-* [Chai](https://github.com/chaijs/chai) - Test assertions
 * [Enzyme](https://github.com/airbnb/enzyme) - Test Utilities
+* [Chai](https://github.com/chaijs/chai) - Test assertions
+* [Mocha](https://github.com/mochajs/mocha) - Test framework
 * [Bootstrap](http://getbootstrap.com/css/) - Bootstrap CSS v4 Library
 
 
-## Author(s)
+## Author
 
 * **Eirik Lin** - [kirie](https://github.com/kirie)
